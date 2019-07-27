@@ -17,4 +17,13 @@ activePlayer = 0;
 
 // create a random number between 1 and 6
 dice = Math.floor(Math.random() * 6) + 1;
-console.log(dice);
+
+//setter
+document.querySelector('#current-' + activePlayer).textContent = dice;
+
+// setter for updating html
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+
+// getter
+var x = document.querySelector('#score-' + activePlayer).textContent;
+console.log(x);
