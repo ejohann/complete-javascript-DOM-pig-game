@@ -59,11 +59,15 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     //update the UI
      document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
     
-    nextPlayer();
-    
     // check if player won the game
-    
-    
+    if(scores[activePlayer] >= 100){
+        // player won
+        document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+     }
+    else
+     {   
+        nextPlayer();
+     }
 });
 
 function nextPlayer(){
