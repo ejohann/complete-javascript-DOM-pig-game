@@ -63,6 +63,9 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     if(scores[activePlayer] >= 100){
         // player won
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+        diceDOM.style.display = 'none';
+        document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+        document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
      }
     else
      {   
