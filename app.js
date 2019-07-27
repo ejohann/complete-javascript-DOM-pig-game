@@ -52,6 +52,7 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
       }
     else{
         // next player
+        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     }
     
     
