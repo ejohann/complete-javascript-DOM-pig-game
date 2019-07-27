@@ -54,6 +54,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         // next player
         roundScore = 0;
         document.getElementById('current-' + activePlayer).textContent = roundScore;
+        document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+        
         activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     }
     
