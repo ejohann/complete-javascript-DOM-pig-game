@@ -27,3 +27,6 @@ document.querySelector('#current-' + activePlayer).textContent = dice;
 // getter
 var x = document.querySelector('#score-' + activePlayer).textContent;
 console.log(x);
+
+// changing css
+document.querySelector('.dice').style.display = 'none';
