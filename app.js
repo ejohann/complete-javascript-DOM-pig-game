@@ -15,15 +15,13 @@ scores = [0,0];
 roundScore = 0;
 activePlayer = 0;
 
-//setter
+
 //document.querySelector('#current-' + activePlayer).textContent = dice;
-
-// setter for updating html
 //document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
+// var x = document.querySelector('#score-' + activePlayer).textContent;
 
-// getter
-var x = document.querySelector('#score-' + activePlayer).textContent;
-console.log(x);
+document.querySelector('.dice').style.display = 'none';
+
 
 
 //roll dice
