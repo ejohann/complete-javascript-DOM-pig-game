@@ -10,7 +10,17 @@
     </head>
 
     <body>
-        <div class="wrapper clearfix">
+       
+        <div id="game-score" class="winning-score">
+                <h3>Winning Score</h3>
+                <i class="ion-ios-trophy"></i>
+                <input type="number" class="win-score" name="score" id="score" placeholder="enter winning score" required>
+                <div class="button-wrap">
+                    <button class="play-game">Play</button>
+                </div>
+            </div>
+       
+        <div id="game-wrapper" class="hidden clearfix">
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
                 <div class="player-score" id="score-0">43</div>
