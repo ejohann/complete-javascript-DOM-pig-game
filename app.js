@@ -10,9 +10,18 @@ GAME RULES:
 
 */
 
-var scores, roundScores, activePlayer, diceDOM, gamePlaying, previousDice;
+var scores, roundScores, activePlayer, diceDOM, gamePlaying, previousDice, gameScore;
 
 init();
+
+//Game score
+document.querySelector('.play-game').addEventListener('click', function(){
+    gameScore = document.getElementById('score').value;
+    console.log(gameScore);
+
+});
+
+
 
 //roll dice
 document.querySelector('.btn-roll').addEventListener('click', function(){
