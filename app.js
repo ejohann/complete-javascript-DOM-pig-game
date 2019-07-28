@@ -17,8 +17,16 @@ init();
 //Game score
 document.querySelector('.play-game').addEventListener('click', function(){
     gameScore = document.getElementById('score').value;
-    console.log(gameScore);
-
+    
+    if( gameScore <= 10 )
+      {
+          document.getElementById('score').value = '';
+          alert('Please enter a number greater than 10');
+      }
+    else
+      {
+        console.log(gameScore);
+      }
 });
 
 
