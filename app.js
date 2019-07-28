@@ -10,7 +10,7 @@ GAME RULES:
 
 */
 
-var scores, roundScores, activePlayer, diceDOM, gamePlaying, previousDice, gameScore;
+var scores, roundScores, activePlayer, diceDOM0, diceDOM1, gamePlaying, previousDice, gameScore;
 
 init();
 
@@ -41,13 +41,16 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
     if(gamePlaying){
       
       //1. create a random number between 1 and 6
-      var dice = Math.floor(Math.random() * 6) + 1;
-    
+      var dice0 = Math.floor(Math.random() * 6) + 1;
+      var dice1 = Math.floor(Math.random() * 6) + 1;
+        
       //2. Display the result
       // changing css
-      diceDOM.style.display = 'block';
+      diceDOM0.style.display = 'block';
+      diceDOM1.style.display = 'block';
       // changing the image
-      diceDOM.src = 'dice-' + dice + '.png';
+      diceDOM0.src = 'dice-' + dice0 + '.png';
+      diceDOM1.src = 'dice-' + dice1 + '.png';
      
       //3. Update the round score if the rolled number was not a 1
       if(dice !== 1){
@@ -108,8 +111,10 @@ function init(){
     roundScore = 0;
     gamePlaying = true;
     previousDice = 0;
-    diceDOM = document.querySelector('.dice');
-    document.querySelector('.dice').style.display = 'none';
+    diceDOM0 = document.querySelector('.dice-0');
+    diceDOM1 = document.querySelector('.dice-1');
+    document.querySelector('.dice-0').style.display = 'none';
+    document.querySelector('.dice-1').style.display = 'none';
     document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
