@@ -25,7 +25,11 @@ document.querySelector('.play-game').addEventListener('click', function(){
       }
     else
       {
-        console.log(gameScore);
+        document.getElementById('game-score').classList.remove('winning-score'); 
+        document.getElementById('game-score').classList.add('hidden'); 
+        document.getElementById('game-wrapper').classList.remove('hidden');
+        document.getElementById('game-wrapper').classList.add('wrapper');
+          
       }
 });
 
@@ -80,7 +84,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
       document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
         
      // check if player won the game
-     if(scores[activePlayer] >= 100){
+     if(scores[activePlayer] >= gameScore){
         // player won
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
         diceDOM.style.display = 'none';
