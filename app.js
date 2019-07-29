@@ -12,7 +12,6 @@ GAME RULES:
 
 var scores, roundScores, activePlayer, diceDOM0, diceDOM1, gamePlaying, previousDice, gameScore;
 
-init();
 
 //Game score
 document.querySelector('.play-game').addEventListener('click', function(){
@@ -30,7 +29,8 @@ document.querySelector('.play-game').addEventListener('click', function(){
         document.getElementById('rules').classList.remove('game-rules'); 
         document.getElementById('rules').classList.add('hidden'); 
         document.getElementById('game-wrapper').classList.remove('hidden');
-        document.getElementById('game-wrapper').classList.add('wrapper');  
+        document.getElementById('game-wrapper').classList.add('wrapper');
+        init();  
       }
 });
 
@@ -91,7 +91,8 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
      if(scores[activePlayer] >= gameScore){
         // player won
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
-        diceDOM.style.display = 'none';
+        diceDOM0.style.display = 'none';
+        diceDOM1.style.display = 'none';
         document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
         document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
         gamePlaying = false;
