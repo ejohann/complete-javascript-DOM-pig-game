@@ -6,7 +6,7 @@ GAME RULES:
 - BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn
 - If the player rolls two sixes in a row, the player loses all score including global score and its next player turn
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
-- The first player to reach 100 points on GLOBAL score wins the game
+- The first player to reach score entered during game startup on GLOBAL score wins the game
 
 */
 
@@ -27,9 +27,10 @@ document.querySelector('.play-game').addEventListener('click', function(){
       {
         document.getElementById('game-score').classList.remove('winning-score'); 
         document.getElementById('game-score').classList.add('hidden'); 
+        document.getElementById('rules').classList.remove('game-rules'); 
+        document.getElementById('rules').classList.add('hidden'); 
         document.getElementById('game-wrapper').classList.remove('hidden');
-        document.getElementById('game-wrapper').classList.add('wrapper');
-          
+        document.getElementById('game-wrapper').classList.add('wrapper');  
       }
 });
 
