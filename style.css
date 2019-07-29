@@ -65,9 +65,17 @@ position: absolute;
     bottom: 50px;
 }
 
+.game-rules{
+    position: absolute;
+    top: 300px;
+    font-family: Lato;
+    font-size: 18px;
+    color: #555;
+    padding: 5px;
+}
 
 .winning-score h3
-{
+ {
     font-size: 14px;
     text-align: center;
     margin-bottom: 10px;
@@ -79,6 +87,7 @@ position: absolute;
     height: 30px;
     padding: 5px;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
  
 .winning-score input:focus {
@@ -103,11 +112,7 @@ position: absolute;
     width: 98%;
 }
  
- 
-
-
-
-.hidden{
+ .hidden{
     display: none;
 }
 
